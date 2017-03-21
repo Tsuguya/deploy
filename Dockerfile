@@ -1,5 +1,5 @@
 FROM gliderlabs/alpine:latest
-RUN apk --no-cache add bash openssl openssh rsync git nodejs tzdata
+RUN apk --no-cache add bash openssl openssh rsync git nodejs zip tzdata
 RUN cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime && \
     apk del tzdata
 RUN npm config set prefix /usr
