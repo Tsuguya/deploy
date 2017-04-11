@@ -12,4 +12,5 @@ RUN echo "http://dl-4.alpinelinux.org/alpine/edge/community" >> /etc/apk/reposit
 	echo "http://dl-4.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories && \
 	echo "http://dl-4.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories
 RUN apk --no-cache --update add php7 php7-json php7-curl php7-openssl php7-dom php7-phar php7-iconv php7-zlib yarn
-RUN curl -sS https://getcomposer.org/installer | php7 -- --install-dir=/usr/bin --filename=composer
+RUN ln -s /usr/bin/php7 /usr/bin/php
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer
