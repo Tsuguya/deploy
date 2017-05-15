@@ -1,5 +1,5 @@
 FROM gliderlabs/alpine:latest
-RUN apk --no-cache --update add curl bash openssl openssh rsync git nodejs zip tzdata tar
+RUN apk --no-cache --update add expect curl bash openssl openssh rsync git nodejs zip tzdata tar
 RUN cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime && \
     apk del tzdata
 RUN curl -sLO https://github.com/github/git-lfs/releases/download/v2.1.0/git-lfs-linux-amd64-2.1.0.tar.gz \
